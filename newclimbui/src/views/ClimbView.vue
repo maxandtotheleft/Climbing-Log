@@ -4,16 +4,20 @@
     <div class="climbs">
     <climb />
     </div>
+    <submit-climb-form />
     <router-link class="goHome" v-bind:to="{ name: 'home'}">Go Home</router-link>
   </div>
 </template>
 
 <script>
 import Climb from '@/components/Climb.vue'
+import SubmitClimbForm from '@/components/SubmitClimbForm.vue'
+
 export default {
     name: "my-climbs",
   components: { 
-    Climb 
+    Climb, 
+    SubmitClimbForm
     },
 
 }

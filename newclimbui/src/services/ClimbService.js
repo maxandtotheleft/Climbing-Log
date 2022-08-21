@@ -8,8 +8,8 @@ export default {
             return climbs;
         }))
     },
-    addClimb(){
-        return axios.post('http://localhost:8080/addclimb').then((response => {
+    addClimb(climb){
+        return axios.post('http://localhost:8080/addclimb', climb).then((response => {
             const climb = response;
             return climb;
         }))
