@@ -1,4 +1,4 @@
-package MODEL;
+package SERVER.climbinglog.MODEL;
 
 public class Climb2 {
     private int climbId;

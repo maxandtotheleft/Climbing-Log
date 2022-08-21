@@ -1,7 +1,7 @@
-package DAO;
+package SERVER.climbinglog.DAO;
 
 
-import MODEL.Climb2;
+import SERVER.climbinglog.MODEL.Climb2;
 
 import java.util.List;
 

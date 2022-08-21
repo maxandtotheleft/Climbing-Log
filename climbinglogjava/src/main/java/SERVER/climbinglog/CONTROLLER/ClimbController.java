@@ -1,8 +1,8 @@
-package CONTROLLER;
+package SERVER.climbinglog.CONTROLLER;
 
 
-import DAO.ClimbDAO;
-import MODEL.Climb2;
+import SERVER.climbinglog.DAO.ClimbDAO;
+import SERVER.climbinglog.MODEL.Climb2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

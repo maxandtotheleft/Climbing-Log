@@ -1,6 +1,6 @@
-package DAO;
+package SERVER.climbinglog.DAO;
 
-import MODEL.Climb2;
+import SERVER.climbinglog.MODEL.Climb2;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -14,7 +14,7 @@ public class JdbcClimbDAO implements ClimbDAO {
 
     private JdbcTemplate jdbcTemplate;
 
-    public JdbcClimbDAO (JdbcTemplate jdbcTemplate) {
+    public JdbcClimbDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
