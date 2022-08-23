@@ -12,5 +12,7 @@ public interface ClimbDAO {
     Climb2 getClimbByName(String climbName);
 
     boolean addClimb(Climb2 climb);
+
+    boolean deleteClimb(int climbId);
 }
 

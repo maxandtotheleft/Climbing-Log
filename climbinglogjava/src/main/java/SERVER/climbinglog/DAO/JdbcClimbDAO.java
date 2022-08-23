@@ -55,6 +55,18 @@ public class JdbcClimbDAO implements ClimbDAO {
         return true;
     }
 
+    @Override
+    public boolean deleteClimb(int climbId) {
+       String sql = "DELETE FROM public.climb\n" +
+               "\tWHERE climb_id = ?;";
+        try {
+           jdbcTemplate.update(sql, climbId);
+        } catch (DataAccessException e) {
+            return false;
+        }
+        return true;
+    }
+
 
     private Climb2 mapRowToClimb2(SqlRowSet rs) {
         Climb2 climb = new Climb2();

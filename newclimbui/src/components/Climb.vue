@@ -9,14 +9,16 @@
     <th>Grade</th>
     <th>Area</th>
   </tr>
-  <tr>
-    <td v-for="climb in climbs" v-bind:key="climb.id">{{climb.climbName}}</td>
-    <td v-for="climb in climbs" v-bind:key="climb.id">{{climb.grade}}</td>
-    <td v-for="climb in climbs" v-bind:key="climb.id">{{climb.area}}</td>
-
-  </tr>
- 
 </table>
+
+    <div>
+     <div v-for="climb in climbs" v-bind:key="climb.id"> <button @click="deleteIt(climb.climbId)">DELETE</button>CLIMB NAME: {{climb.climbName}} GRADE: V{{climb.grade}} AREA: {{climb.area}}</div>
+    </div>
+
+  
+ 
+ 
+
   </div>
 </template>
 
@@ -36,6 +38,11 @@ export default {
         grade: ""    
     } 
     };
+  },
+  methods: {
+    deleteIt(id){
+      ClimbService.deleteClimb(id)
+    }
   },
   created() {
     ClimbService.getAllClimbs().then((response) => {

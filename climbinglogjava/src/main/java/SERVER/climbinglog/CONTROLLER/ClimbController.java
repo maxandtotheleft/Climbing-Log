@@ -30,8 +30,9 @@ public class ClimbController {
     @RequestMapping(path = "/climbs/{climbName}", method = RequestMethod.GET)
     public Climb2 getClimbByName(@PathVariable String climbName){return climbDAO.getClimbByName(climbName);}
 
-    @RequestMapping(path ="/addclimb", method = RequestMethod.POST)
+    @RequestMapping(path ="/addClimb", method = RequestMethod.POST)
     public boolean addClimb(@RequestBody Climb2 climb){return climbDAO.addClimb(climb);}
 
-
+    @RequestMapping(path = "/{climbId}", method = RequestMethod.DELETE)
+    public boolean deleteClimb (@PathVariable int climbId){return climbDAO.deleteClimb(climbId);}
 }

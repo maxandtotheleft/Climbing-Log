@@ -9,10 +9,17 @@ export default {
         }))
     },
     addClimb(climb){
-        return axios.post('http://localhost:8080/addclimb', climb).then((response => {
+        return axios.post('http://localhost:8080/addClimb', climb).then((response => {
             const climb = response;
             return climb;
         }))
+    },
+    deleteClimb(id){
+        return axios.delete(`http://localhost:8080/${id}`)
+        // .then((response => {
+        //     const climb = response;
+        //     return climb;
+        // }))
     }
 
 }
